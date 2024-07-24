@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assents/css/style.css">
+    <title>Relógio Digital</title>
+    <style>
+        body {
+            background-color: #0e0e0e;
+            color: #00ffcc;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .relogio {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 2px solid #00ffcc;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+        }
+        
+        .relogio:hover {
+            transform: scale(1.05);
+        }
+        
+        div {
+            text-align: center;
+        }
+        
+        span {
+            display: block;
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+            transition: color 0.3s;
+        }
+        
+        span.tempo {
+            font-size: 0.5em;
+            color: #ffffff;
+            margin-top: -10px;
+        }
+        
+        @keyframes glow {
+            0% {text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);}
+            50% {text-shadow: 0 0 20px rgba(0, 255, 204, 1);}
+            100% {text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);}
+        }
+
+        span {
+            animation: glow 1.5s infinite alternate;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="relogio">
+        <div>
+            <span id="horas">00</span>
+            <span class="tempo">Horas</span>
+        </div>
+
+        <div>
+            <span id="minutos">00</span>
+            <span class="tempo">Minutos</span>
+        </div>
+
+        <div>
+            <span id="segundos">00</span>
+            <span class="tempo">Segundos</span>
+        </div>
+    </div>
+
+    <script src="assents/js/script.js"></script>
+</body>
+</html>
